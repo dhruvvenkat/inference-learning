@@ -26,7 +26,7 @@ void printMatrix(Matrix& matrixIn) {
 
 }
 
-Matrix naive(Matrix matrix1, Matrix matrix2) {
+Matrix naive(Matrix& matrix1, Matrix& matrix2) {
     vector<vector<int>> vals1 = matrix1.getVals();
     vector<vector<int>> vals2 = matrix2.getVals();
     vector<int> currRow;
