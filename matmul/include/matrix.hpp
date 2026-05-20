@@ -10,8 +10,9 @@ class Matrix {
         vector<vector<int>> values;                         
     
     public:
-        Matrix(vector<vector<int>> values);
+        Matrix(vector<vector<int>> input);
         ~Matrix();
+        vector<vector<int>> getVals();
 };
 
 
