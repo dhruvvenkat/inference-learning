@@ -1,14 +1,18 @@
-#define MATRIX_HEADER
+#include <vector>
+
+using namespace std;
+
 #ifndef MATRIX_HEADER
+#define MATRIX_HEADER
 
 class Matrix {
     private:
-                
+        vector<vector<int>> values;                         
     
     public:
-        int[][] multiplyMatrices (int[][] matrix1, int[][] matrix2);
-                
-}
+        Matrix(vector<vector<int>> values);
+        ~Matrix();
+};
 
 
 #endif
