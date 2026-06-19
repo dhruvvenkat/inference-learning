@@ -17,13 +17,23 @@ vector<vector<int>> Matrix::getVals() {
 
 void printMatrix(Matrix& matrixIn) {
     vector<vector<int>> vals = matrixIn.getVals();
-    for (long unsigned int i = 0; i < vals.size(); i++) {
-        for (long unsigned int j = 0; j < vals[i].size(); j++) {
-            cout << vals[i][j] << " ";
+
+    cout << "[" << endl;
+    for (size_t i = 0; i < vals.size(); i++) {
+        cout << "  [";
+        for (size_t j = 0; j < vals[i].size(); j++) {
+            cout << vals[i][j];
+            if (j + 1 < vals[i].size()) {
+                cout << ", ";
+            }
+        }
+        cout << "]";
+        if (i + 1 < vals.size()) {
+            cout << ",";
         }
         cout << endl;
     }
-
+    cout << "]" << endl;
 }
 
 Matrix naive(Matrix& matrix1, Matrix& matrix2) {
@@ -55,14 +65,17 @@ int main() {
     vector<vector<int>> v2 = {{7, 8}, {9, 10}, {11, 12}};
     Matrix matrix2 = Matrix(v2);
     
+    cout << "Input matrix 1:" << endl;
     printMatrix(matrix1);
-    cout << "////////" << endl;
+    cout << endl;
+
+    cout << "Input matrix 2:" << endl;
     printMatrix(matrix2);
-    cout << "////////" << endl;
+    cout << endl;
 
     Matrix output = naive(matrix1, matrix2);
 
+    cout << "Output matrix:" << endl;
     printMatrix(output);
 
 }
-

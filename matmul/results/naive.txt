@@ -1,46 +1,51 @@
-1 2 3 
-4 5 6 
-////////
-7 8 
-9 10 
-11 12 
-////////
-58 64 
-139 154 
+Input matrix 1:
+[
+  [1, 2, 3],
+  [4, 5, 6]
+]
+
+Input matrix 2:
+[
+  [7, 8],
+  [9, 10],
+  [11, 12]
+]
+
+Output matrix:
+[
+  [58, 64],
+  [139, 154]
+]
 
  Performance counter stats for './naive-multiply':
 
-         2,912,946      task-clock                       #    0.637 CPUs utilized             
-                 1      context-switches                 #  343.295 /sec                      
-                 1      cpu-migrations                   #  343.295 /sec                      
-               127      page-faults                      #   43.598 K/sec                     
-         2,062,622      cpu_atom/instructions/           #    0.64  insn per cycle              (31.76%)
-         3,184,594      cpu_core/instructions/           #    0.95  insn per cycle              (31.75%)
-         3,230,999      cpu_atom/cycles/                 #    1.109 GHz                         (65.96%)
-         3,356,516      cpu_core/cycles/                 #    1.152 GHz                         (31.75%)
-           584,280      cpu_atom/branches/               #  200.580 M/sec                       (68.25%)
-           559,505      cpu_core/branches/               #  192.075 M/sec                       (31.75%)
-            18,554      cpu_atom/branch-misses/          #    3.18% of all branches             (68.25%)
-            17,997      cpu_core/branch-misses/          #    3.22% of all branches             (31.75%)
- #     26.6 %  tma_backend_bound      
-                                                  #     11.9 %  tma_bad_speculation    
-                                                  #     44.4 %  tma_frontend_bound     
-                                                  #     17.2 %  tma_retiring             (31.75%)
- #     17.7 %  tma_bad_speculation    
-                                                  #     23.6 %  tma_retiring             (68.25%)
- #     32.6 %  tma_backend_bound      
-                                                  #     26.1 %  tma_frontend_bound       (68.25%)
-         1,020,896      cpu_atom/L1-dcache-loads/        #  350.469 M/sec                       (2.30%)
-           825,714      cpu_core/L1-dcache-loads/        #  283.464 M/sec                       (31.75%)
-            24,880      cpu_core/L1-dcache-load-misses/  #    3.01% of all L1-dcache accesses   (31.75%)
-     <not counted>      cpu_atom/LLC-loads/                                                     (0.00%)
-             7,468      cpu_core/LLC-loads/              #    2.564 M/sec                       (31.75%)
+         3,292,240      task-clock                       #    0.654 CPUs utilized             
+                 0      context-switches                 #    0.000 /sec                      
+                 0      cpu-migrations                   #    0.000 /sec                      
+               127      page-faults                      #   38.576 K/sec                     
+         1,841,393      cpu_atom/instructions/           #    0.58  insn per cycle              (15.29%)
+     <not counted>      cpu_core/instructions/                                                  (0.00%)
+         3,149,392      cpu_atom/cycles/                 #    0.957 GHz                         (45.55%)
+     <not counted>      cpu_core/cycles/                                                        (0.00%)
+           612,814      cpu_atom/branches/               #  186.139 M/sec                       (75.79%)
+     <not counted>      cpu_core/branches/                                                      (0.00%)
+            18,025      cpu_atom/branch-misses/          #    2.94% of all branches           
+     <not counted>      cpu_core/branch-misses/                                                 (0.00%)
+ #     18.0 %  tma_bad_speculation    
+                                                  #     23.3 %  tma_retiring           
+ #     31.5 %  tma_backend_bound      
+                                                  #     27.2 %  tma_frontend_bound     
+         1,104,756      cpu_atom/L1-dcache-loads/        #  335.564 M/sec                       (54.45%)
+     <not counted>      cpu_core/L1-dcache-loads/                                               (0.00%)
+     <not counted>      cpu_core/L1-dcache-load-misses/                                         (0.00%)
+             3,936      cpu_atom/LLC-loads/              #    1.196 M/sec                       (24.21%)
+     <not counted>      cpu_core/LLC-loads/                                                     (0.00%)
      <not counted>      cpu_atom/LLC-load-misses/                                               (0.00%)
-             1,959      cpu_core/LLC-load-misses/        #   26.23% of all LL-cache accesses    (31.75%)
+     <not counted>      cpu_core/LLC-load-misses/                                               (0.00%)
 
-       0.004574229 seconds time elapsed
+       0.005032617 seconds time elapsed
 
-       0.000914000 seconds user
-       0.003656000 seconds sys
+       0.000878000 seconds user
+       0.004392000 seconds sys
 
 
